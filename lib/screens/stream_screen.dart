@@ -4,9 +4,9 @@ class StreamScreen extends StatelessWidget {
   final String title;
   const StreamScreen({Key? key, required this.title}) : super(key: key);
 
-  Stream myStream() async* {
+  Stream myStream() async* {//bcoz it's a stream/
     for (var i = 0; i < 10; i++) {
-      yield i;
+      yield i;//don't use return//
       await Future.delayed(const Duration(seconds: 3));
     }
   }
